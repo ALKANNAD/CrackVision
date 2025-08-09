@@ -12,8 +12,9 @@ The work in this repository is detailed in the following paper:
 
 * **Title:** CrackVision: Effective Concrete Crack Detection With Deep Learning and Transfer Learning  
 * **Authors:** Abdulrahman A. Alkannad, Ahmad Al Smadi, Shuyuan Yang, Mutasem K. Al-Smadi, Moeen Al-Makhlafi, Zhixi Feng, and Zhenlong Yin.  
-* **PDF:** A copy of the paper, CrackVision\_Effective\_Concrete\_Crack\_Detection\_With\_Deep\_Learning\_and\_Transfer\_Learning.pdf, is included in this repository.  
-* **\[Link to Online Publication\]** *(\<- Replace this with the public link to your paper if available, e.g., on arXiv, ResearchGate, or a conference website)*
+* **PDF:** CrackVision\_Effective\_Concrete\_Crack\_Detection\_With\_Deep\_Learning\_and\_Transfer\_Learning.pdf, is included in this repository.  
+* **[Link to Online Publication](https://doi.org/10.1109/ACCESS.2025.3540841)**  
+
 
 ## **Models and Results**
 
@@ -21,15 +22,15 @@ This project is organized into three main classification challenges, with each t
 
 | Classification Task | Dataset | Model Architecture | Top Accuracy (Test Set) | Notebook File |
 | :---- | :---- | :---- | :---- | :---- |
-| **Binary** (Crack vs. No-Crack) | METU | ResNet50 | 99.95% | Crackclassification RESENT50 with METU model.ipynb |
-| **Binary** (Crack vs. No-Crack) | METU | Xception | **99.97%** | Crackclassification Xception with METU model.ipynb |
-| **Binary** (Crack vs. No-Crack) | METU | InceptionV3 | 99.96% | Crackclassification InceptionV3 with METU model.ipynb |
-| **Multi-Class** (Deck vs. Wall vs. Pavement) | SDNET2018 | ResNet50 | 99.90% | Crack classification RESENT50 D VS W VS P.ipynb |
-| **Multi-Class** (Deck vs. Wall vs. Pavement) | SDNET2018 | Xception | **99.92%** | Crack classification Xception D VS W VS P.ipynb |
-| **Multi-Class** (Deck vs. Wall vs. Pavement) | SDNET2018 | InceptionV3 | 99.91% | Crack classification InceptionV3 D VS W VS P.ipynb |
-| **Multi-Class** (Deck vs. Pavement) | SDNET2018 | ResNet50 | 99.88% | Crack classification RESENT50 D VS P.ipynb |
-| **Multi-Class** (Deck vs. Pavement) | SDNET2018 | Xception | **99.95%** | Crack classification Xception D VS P.ipynb |
-| **Multi-Class** (Deck vs. Pavement) | SDNET2018 | InceptionV3 | 99.93% | Crack classification InceptionV3 D VS P.ipynb |
+| Binary (Crack vs. No-Crack) | METU | ResNet50 | 99.95% | Crackclassification_RESNET50_with_METU_model.ipynb |
+| Binary (Deck) | SDNET2018 | ResNet50 | 97.46% | Crackclassification_RESNET50_Deck.ipynb |
+| Binary (Wall) | SDNET2018 | ResNet50 | 96.06% | Crackclassification_RESNET50_Wall.ipynb |
+| Binary (Pavement) | SDNET2018 | ResNet50 | 98.46% | Crackclassification_RESNET50_Pavement.ipynb |
+| Multi-Class (Deck vs. Wall) | SDNET2018 | ResNet50 | 96.46% | Crack_classification_RESNET50_D_vs_W.ipynb |
+| Multi-Class (Deck vs. Pavement) | SDNET2018 | ResNet50 | 97.58% | Crack_classification_RESNET50_D_vs_P.ipynb |
+| Multi-Class (Wall vs. Pavement) | SDNET2018 | ResNet50 | 97.49% | Crack_classification_RESNET50_W_vs_P.ipynb |
+| Multi-Class (Deck vs. Wall vs. Pavement) | SDNET2018 | ResNet50 | 97.02% | Crack_classification_RESNET50_D_vs_W_vs_P.ipynb |
+
 
 ## **Setup and Installation**
 
@@ -93,30 +94,56 @@ To run an experiment:
 
 ## **Repository Structure**
 
-CrackVision/  
-├── METU/                   \# For the METU dataset (needs to be created)  
-│   ├── Negative/  
-│   └── Positive/  
-├── Dataset/                \# For the SDNET2018 dataset (needs to be created)  
-│   └── SDNET2018/  
-│       ├── CD/  
-│       ├── CP/  
-│       ├── CW/  
-│       └── ...  
-├── Models/                   \# Directory where trained models and plots are saved  
-├── CrackVision\_Effective\_Concrete\_Crack\_Detection\_With\_Deep\_Learning\_and\_Transfer\_Learning.pdf  
-├── \*.ipynb                   \# All Jupyter Notebooks for the experiments  
-└── README.md
+
+
+CrackVision/
+
+├── Dataset/                  # For the SDNET2018 and METU datasets (need to be created)  
+│   ├── SDNET2018/  
+│   │   ├── CD/  
+│   │   ├── CP/  
+│   │   ├── CW/  
+│   │   └── ...  
+│   └── METU/  
+│       ├── Negative/  
+│       └── Positive/  
+
+├── Models/                  # Directory where trained models and plots are saved  
+├── requirements.txt  
+├── CrackVision_Effective_Concrete_Crack_Detection_With_Deep_Learning_and_Transfer_Learning.pdf  
+├── *.ipynb                  # All Jupyter Notebooks for the experiments  
+└── README.md  
+
+## **Requirements**
+
+* Python 3.8 or higher  
+* TensorFlow 2.x  
+* Keras  
+* NumPy  
+* OpenCV  
+* Matplotlib  
+* scikit-learn  
+* pandas  
+* tqdm  
+
+Install requirements with:  
+ 
+pip install -r requirements.txt
+
 
 ## **Citation**
 
 If you use this code or the findings from our paper in your research, please cite our work.
 
 @article{CrackVision2025,  
-    title={CrackVision: Effective Concrete Crack Detection With Deep Learning and Transfer Learning},  
-    author={Alkannad, Abdulrahman A. and Al Smadi, Ahmad and Yang, Shuyuan and Al-Smadi, Mutasem K. and Al-Makhlafi, Moeen and Feng, Zhixi and Yin, Zhenlong},  
-    year={2025},  
-    journal={Journal/Conference Name},  
-}
+  author={Alkannad, Abdulrahman A. and Al Smadi, Ahmad and Yang, Shuyuan and Al-Smadi, Mutasem K. and Al-Makhlafi, Moeen and Feng, Zhixi and Yin, Zhenlong},
+  journal={IEEE Access},
+  title={CrackVision: Effective Concrete Crack Detection with Deep Learning and Transfer Learning},
+  year={2025},
+  volume={13},
+  number={},
+  pages={29554--29576},
+  keywords={Accuracy; Transfer learning; Filters; Deep learning; Concrete; Visualization; Inspection; Computer architecture; Adaptation models; Residual neural networks; Concrete crack detection; transfer learning; data imbalance
 
-*(Please update the year and journal/conference details as appropriate)*
+
+ 
