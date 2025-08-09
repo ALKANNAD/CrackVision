@@ -104,10 +104,9 @@ CrackVision/
 │   │   ├── CP/  
 │   │   ├── CW/  
 │   │   └── ...  
-│   └── METU/  
-│       ├── Negative/  
-│       └── Positive/  
-
+│   ├── METU/  
+│   │   ├── Negative/  
+│   │   ├── Positive/  
 ├── Models/                  # Directory where trained models and plots are saved  
 ├── requirements.txt  
 ├── CrackVision_Effective_Concrete_Crack_Detection_With_Deep_Learning_and_Transfer_Learning.pdf  
