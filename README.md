@@ -4,7 +4,7 @@ This repository contains the official implementation for the paper **"CrackVisio
 
 ## **Overview**
 
-The manual inspection of concrete structures is a time-consuming, subjective, and often hazardous process. This project, CrackVision, presents a deep learning approach to automate this task, improving efficiency and accuracy. We compare three state-of-the-art pre-trained convolutional neural network (CNN) architectures—**ResNet50**, **Xception**, and **InceptionV3**—on two distinct classification tasks using public datasets. The results demonstrate the high effectiveness of transfer learning for this purpose, with the Xception model achieving a peak accuracy of **99.97%**.
+The manual inspection of concrete structures is a time-consuming, subjective, and often hazardous process. This project, CrackVision, presents a deep learning approach to automate this task, improving efficiency and accuracy. We compare three state-of-the-art pre-trained convolutional neural network (CNN) architectures **ResNet50**, **Xception**, and **InceptionV3** on two distinct classification tasks using public datasets. The results demonstrate the high effectiveness of transfer learning for this purpose, with the Xception model achieving a peak accuracy of **99.97%**.
 
 ## **Publication**
 
